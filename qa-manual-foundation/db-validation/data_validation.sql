@@ -1,26 +1,28 @@
--- Week 4: Data & Backend (SQL) - Validation Queries
--- These are the SQL queries I wrote for testing and validating the NexusPay database.
+-- NexusPay Data Validation SQL
+-- This is my final manual project for Week 4: Data & Backend (SQL)
+-- I created this to validate the database integrity for NexusPay.
 
--- Day 24: Joins. Find all transactions belonging to "User ID 505."
--- (Note: In sample data, user IDs start from 1, so using 1 for Jane)
+-- First, run schema-setup.sql to create tables and insert sample data
+
+-- Then run these validation queries:
+
+-- 1. Find all transactions for a specific user (Day 24)
 SELECT t.id, t.type, t.amount, t.description, t.created_at
 FROM transactions t
 JOIN users u ON t.user_id = u.id
-WHERE u.id = 1;  -- Change to 505 if you have that user
+WHERE u.id = 1;  -- Replace with actual user ID
 
--- Day 25: Aggregates. Calculate the total "Balance" of all users.
+-- 2. Calculate total balance of all users (Day 25)
 SELECT SUM(balance) AS total_balance_all_users
 FROM users;
 
--- Day 26: Data Integrity. Find "Orphaned" transactions (money sent to a user that doesn't exist).
--- This finds transactions where user_id does not exist in users table
+-- 3. Find orphaned transactions (Day 26)
 SELECT t.id, t.user_id, t.type, t.amount
 FROM transactions t
 LEFT JOIN users u ON t.user_id = u.id
 WHERE u.id IS NULL;
 
--- Day 27: Advanced SQL. Write a query to find the top 5 users by volume.
--- Assuming "volume" means total transaction amount
+-- 4. Top 5 users by transaction volume (Day 27)
 SELECT u.id, u.name, SUM(t.amount) AS total_volume
 FROM users u
 JOIN transactions t ON u.id = t.user_id
@@ -28,10 +30,7 @@ GROUP BY u.id, u.name
 ORDER BY total_volume DESC
 LIMIT 5;
 
--- Additional useful queries for data validation
-
--- Check balance reconciliation: Sum of deposits minus sum of sends/withdraws should match current balance
--- For each user
+-- 5. Balance reconciliation check
 SELECT u.id, u.name, u.balance,
        COALESCE(SUM(CASE WHEN t.type = 'deposit' THEN t.amount ELSE 0 END), 0) -
        COALESCE(SUM(CASE WHEN t.type IN ('withdraw', 'send') THEN t.amount ELSE 0 END), 0) AS calculated_balance
@@ -41,4 +40,4 @@ GROUP BY u.id, u.name, u.balance
 HAVING u.balance != (COALESCE(SUM(CASE WHEN t.type = 'deposit' THEN t.amount ELSE 0 END), 0) -
                      COALESCE(SUM(CASE WHEN t.type IN ('withdraw', 'send') THEN t.amount ELSE 0 END), 0));
 
--- Day 28: Final Manual Project. This file (validation-queries.sql) is ready to upload to GitHub.
+-- This ensures data integrity in my NexusPay system.

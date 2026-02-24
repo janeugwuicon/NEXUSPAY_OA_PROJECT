@@ -4,9 +4,9 @@
 
 ## The Big Picture: Why This Document Matters
 
-Many people new to software development think testing is the final step before a product is released. This is a common misconception. On modern, agile teams like ours at NexusPay, quality isn't an afterthought—it's built into every stage of the process.
+Many people new to software development think testing is the final step before a product is released. This is a common misconception. On modern, agile teams like mine at NexusPay, quality isn't an afterthought—it's built into every stage of the process.
 
-This document explains two fundamental concepts—the Software Development Life Cycle (SDLC) and the Software Testing Life Cycle (STLC)—and shows how they work together to ensure we build high-quality software from the very beginning.
+This document explains two fundamental concepts—the Software Development Life Cycle (SDLC) and the Software Testing Life Cycle (STLC)—and shows how they work together to ensure I build high-quality software from the very beginning.
 
 ---
 
@@ -45,7 +45,7 @@ The relationship between SDLC and STLC depends entirely on the development metho
 
 *   **In Traditional Waterfall:** The SDLC is a linear sequence of steps. You finish one phase completely before starting the next. In this model, the STLC is just one of those steps, happening *after* all development is complete. It’s like an assembly line where quality control happens only at the very end.
 
-*   **In Modern Agile:** The process is not linear. Instead, we work in short, iterative cycles (sprints). Here, the **STLC runs in parallel with the SDLC**. Testing activities happen continuously and are integrated into every stage of development.
+*   **In Modern Agile:** The process is not linear. Instead, I work in short, iterative cycles (sprints). Here, the **STLC runs in parallel with the SDLC**. Testing activities happen continuously and are integrated into every stage of development.
 
 Think of it like this:
 *   **Waterfall:** Building a whole car, then inspecting it for flaws at the end.
@@ -55,25 +55,25 @@ Think of it like this:
 
 ## How SDLC & STLC Work Together at NexusPay (An Agile Team)
 
-On our team, we don’t "hand off" work from developers to testers. Quality is a shared responsibility, and testing activities are woven into our two-week sprints from start to finish.
+On my team, I don't "hand off" work from developers to testers. Quality is a shared responsibility, and testing activities are woven into my two-week sprints from start to finish.
 
 #### 1. It Starts with Requirements
-Before a single line of code is written, quality assurance begins. When a new user story is discussed, QA is already asking critical questions:
+Before a single line of code is written, quality assurance begins. When a new user story is discussed, I ask critical questions:
 *   Are the requirements unambiguous and testable?
-*   Have we considered edge cases (e.g., what if the user has no internet)?
+*   Have I considered edge cases (e.g., what if the user has no internet)?
 *   Are error messages clearly defined?
-*   **Example:** For a "user payment" story, QA will ask: What happens if the balance is too low? What if the payment gateway times out? Can the user retry?
+*   **Example:** For a "user payment" story, I ask: What happens if the balance is too low? What if the payment gateway times out? Can the user retry?
 *   *This early involvement prevents defects before they are ever created.*
 
 #### 2. During Sprint Planning
-During planning, QA contributes by:
+During planning, I contribute by:
 *   Estimating the testing effort required for each story.
 *   Identifying potential risks and dependencies.
 *   Ensuring the acceptance criteria are clear and measurable.
 *   *This ensures quality is planned, not just inspected.*
 
 #### 3. While Developers Are Coding
-Testers don't sit idle waiting for code. While development is in progress, the QA team is:
+Testers don't sit idle waiting for code. While development is in progress, I am:
 *   Writing detailed test cases based on the user story.
 *   Preparing necessary test data (e.g., creating test user accounts).
 *   Reviewing API contracts and database schemas.
@@ -87,10 +87,10 @@ As soon as a developer finishes a feature, it moves to testing. This is where th
 *   **Integration Testing:** Does it work with other parts of the application?
 
 #### 5. Before a Release
-Before deploying to our users, we perform final verification:
+Before deploying to my users, I perform final verification:
 *   **Smoke Testing:** A quick check of critical functionalities (e.g., login, main navigation).
 *   **Regression Testing:** Ensuring that the new changes haven't broken any existing features.
-*   *This is our final safety net to protect the user experience and business-critical flows.*
+*   *This is my final safety net to protect the user experience and business-critical flows.*
 
 ---
 
@@ -110,4 +110,4 @@ Before deploying to our users, we perform final verification:
 
 **Testing is not a phase; it is a continuous activity.**
 
-In NexusPay's agile model, the STLC is not a final gate but an integral part of the SDLC. By embedding testing activities throughout the development lifecycle, we reduce risk, prevent defects early, and build a better, more reliable product from day one. Quality is everyone's responsibility, built-in from the start.
+In NexusPay's agile model, the STLC is not a final gate but an integral part of the SDLC. By embedding testing activities throughout the development lifecycle, I reduce risk, prevent defects early, and build a better, more reliable product from day one. Quality is everyone's responsibility, built-in from the start.

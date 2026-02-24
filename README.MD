@@ -1,9 +1,9 @@
 NexusPay – Fintech Quality Engineering Portfolio
 Overview
 
-NexusPay is a high-frequency global fintech wallet simulation built to demonstrate end-to-end Quality Engineering across the full SDLC.
+NexusPay is a high-frequency global fintech wallet simulation I built to demonstrate end-to-end Quality Engineering across the full SDLC.
 
-This repository reflects over four years of practical QA experience applied to a transaction-heavy financial system. The focus is not simply feature testing, but risk prevention, transaction integrity, system reliability, and automation architecture.
+This repository reflects over four years of practical QA experience I applied to a transaction-heavy financial system. The focus is not simply feature testing, but risk prevention, transaction integrity, system reliability, and automation architecture.
 
 In fintech systems, failure impacts real users and real money. This project demonstrates a prevention-first approach to quality, built around structured thinking, automation discipline, and business risk awareness.
 
@@ -112,7 +112,7 @@ investigation/
 – browser-performance.md
 – security-findings.md
 
-This structure reflects real-world QA documentation used in production environments.
+This structure reflects real-world QA documentation I used in production environments.
 
 Technology Stack (Current & Upcoming Phases)
 
@@ -167,7 +167,7 @@ Automation modules will include separate execution instructions as they are adde
 
 Professional Context
 
-This project represents structured quality engineering thinking applied to a fintech-grade system.
+This project represents structured quality engineering thinking I applied to a fintech-grade system.
 
 It demonstrates:
 

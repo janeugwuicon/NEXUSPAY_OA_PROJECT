@@ -1,6 +1,6 @@
 # NexusPay: Manual Quality Foundation
 
-This repository contains the strategic quality documentation, risk analysis, and manual test engineering for the **NexusPay** Fintech ecosystem.
+This repository contains the strategic quality documentation, risk analysis, and manual test engineering I created for the **NexusPay** Fintech ecosystem.
 
 ##  Objectives
 - Establish a Risk-Based Testing (RBT) framework for global payments.
